@@ -1,0 +1,12 @@
+services:
+  api:
+    image: docker.io/nofoo/demoserver:latest
+    
+    build:
+      context: .
+      platforms:
+        - "linux/arm64"
+
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
