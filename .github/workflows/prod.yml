@@ -47,4 +47,4 @@ jobs:
                 ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
             - name: Deploy and run
-              run: ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_IP}} "podman stop demoserver ; podman run -it docker.io/nofoo/demoserver"
+              run: ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_IP}} "podman stop demoserver ; podman run -it --name demoserver docker.io/nofoo/demoserver:latest"
