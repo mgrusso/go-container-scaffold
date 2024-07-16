@@ -10,6 +10,6 @@ func main() {
 	http.ListenAndServe(":8000", nil)
 }
 
-func HelloSrv(w ResponseWriter, r *http.Request) {
+func HelloSrv(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello from inside an auto-deployed container!")
 }
