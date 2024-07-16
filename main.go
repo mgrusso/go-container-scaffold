@@ -11,5 +11,5 @@ func main() {
 }
 
 func HelloSrv(w ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello from inside a container!")
+	fmt.Fprintf(w, "Hello from inside an auto-deployed container!")
 }
