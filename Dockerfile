@@ -1,4 +1,4 @@
-FROM golang:latest as builder
+FROM --platform=linux/arm64 golang:latest AS builder
 WORKDIR /app
 COPY go.mod ./
 RUN go mod download
