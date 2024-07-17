@@ -1,8 +1,9 @@
 services:
   frontend:
-    #image: docker.io/nofoo/demoserver:latest
+    image: docker.io/nofoo/demoserver:arm
+    platform: linux/arm64
     
-    build: frontend
-    platform: "linux/arm64"
+    build: .
+    #platform: linux/arm64
     ports:
       - "8000:8000"
